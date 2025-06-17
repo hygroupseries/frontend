@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻列表</title>
+    <style>
+        body {
+            /* 盒子模型属性 */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            
+            /* 文字样式 */
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .news-container {
+            /* 盒子模型属性 */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-header {
+            /* 盒子模型属性 */
+            padding: 15px 20px;
+            border-bottom: 3px solid #f0a500;
+            
+            /* 文字样式 */
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #f8f8f8;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .news-list {
+            /* 盒子模型属性 */
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .news-item {
+            /* 盒子模型属性 */
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            
+            /* 文字样式 */
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .news-icon {
+            /* 盒子模型属性 */
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #f0a500;
+            border-radius: 2px;
+        }
+
+        .news-title {
+            /* 文字样式 */
+            color: #666;
+            text-decoration: none;
+            flex: 1;
+        }
+
+        .news-title:hover {
+            color: #f0a500;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-container">
+        <div class="news-header">
+            新闻
+        </div>
+        <ul class="news-list">
+            <li class="news-item">
+                <div class="news-icon"></div>
+                <a href="#" class="news-title">京豪 "新农人" 追梦的伴手</a>
+            </li>
+            <li class="news-item">
+                <div class="news-icon"></div>
+                <a href="#" class="news-title">在希望的田野上...</a>
+            </li>
+            <li class="news-item">
+                <div class="news-icon"></div>
+                <a href="#" class="news-title">"中国天眼"又有新发现 已在《自然》杂志发表</a>
+            </li>
+            <li class="news-item">
+                <div class="news-icon"></div>
+                <a href="#" class="news-title">急！这个职缺，年入！月薪4万元还大开招！ 谁情况？</a>
+            </li>
+            <li class="news-item">
+                <div class="news-icon"></div>
+                <a href="#" class="news-title">G9 "带货" 背后：专项融资支护大，竞争环境数列</a>
+            </li>
+            <li class="news-item">
+                <div class="news-icon"></div>
+                <a href="#" class="news-title">多地力推三季房 "带货过户"，有什么好处？</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
