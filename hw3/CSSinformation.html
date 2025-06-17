@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS信息页面</title>
+    <style>
+        body {
+            /* 盒子模型属性 */
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            
+            /* 文字样式 */
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #f9f9f9;
+        }
+
+        .main-title {
+            /* 盒子模型属性 */
+            margin: 20px 0;
+            
+            /* 文字样式 */
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .red-text {
+            /* 文字样式 */
+            color: #e74c3c;
+        }
+
+        .blue-text {
+            /* 文字样式 */
+            color: #3498db;
+        }
+
+        .orange-text {
+            /* 文字样式 */
+            color: #f39c12;
+        }
+
+        .font-14 {
+            /* 文字样式 */
+            font-size: 14px;
+        }
+
+        .font-30 {
+            /* 文字样式 */
+            font-size: 30px;
+        }
+
+        .font-50 {
+            /* 文字样式 */
+            font-size: 50px;
+        }
+
+        .paragraph {
+            /* 盒子模型属性 */
+            margin: 15px 0;
+            padding: 10px;
+            
+            /* 文字样式 */
+            font-size: 16px;
+            text-align: justify;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #fff;
+            border-left: 4px solid #3498db;
+        }
+
+        .highlight-section {
+            /* 盒子模型属性 */
+            padding: 20px;
+            margin: 20px 0;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bullet-list {
+            /* 盒子模型属性 */
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .bullet-item {
+            /* 盒子模型属性 */
+            margin: 10px 0;
+            
+            /* 文字样式 */
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .link-text {
+            /* 文字样式 */
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        .version-info {
+            /* 文字样式 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="highlight-section">
+        <h1 class="main-title">
+            CSS（<span class="red-text">层叠样式表</span>）<span class="red-text">#333333</span>
+        </h1>
+        
+        <div class="paragraph">
+            <span class="red-text">#444444</span>
+            <span class="blue-text">#0069c2</span>
+            <br>
+            <span class="font-14 red-text">14px</span><span class="red-text">层叠样式表</span>（Cascading Style Sheets，缩写为 CSS），是一种 <span class="blue-text">样式表</span> 语言，用来描述 HTML 或 XML（包括如 SVG、MathML、XHTML 之类的 XML 分支语言）文档的呈现。
+            <br>
+            <span class="font-30 red-text">30px</span>
+            <br>
+            CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。
+        </div>
+    </div>
+
+    <div class="highlight-section">
+        <div class="paragraph">
+            CSS 是开放网络的核心语言之一，由 W3C 规范 实现跨浏览器的标准化。CSS 节省了大量的工作。样式可以通过定义保存在外部.css 文件中，同时控制多个网页的布局，这意味着开发者不必经历在所有网页上编辑布局的痛苦。CSS 被分为不同等级：<span class="version-info">CSS1 现已废弃，CSS2.1 是推荐标准，CSS3 分成多个小模块且正在标准化中</span>。
+        </div>
+    </div>
+
+    <div class="highlight-section">
+        <ul class="bullet-list">
+            <li class="bullet-item">
+                CSS 介绍 如果您是 Web 开发的新手，请务必阅读我们的 CSS 基础 文章以学习 CSS 的含义和用法。
+                <span class="font-50 red-text">50px</span>
+            </li>
+            <li class="bullet-item">
+                CSS 教程 我们的 CSS 学习区 包含了丰富的教程，它们覆盖了全部基础知识，能使你在 CSS 之路上从初出茅庐到游刃有余。
+            </li>
+            <li class="bullet-item">
+                CSS 参考 针对资深 Web 开发者的 <span class="link-text">详细参考手册</span>，描述了 CSS 的各个属性与概念。
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
