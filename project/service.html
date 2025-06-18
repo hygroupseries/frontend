@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客服中心</title>
+    <style>
+        * {
+            /* 盒子模型属性 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 文字样式 */
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+            color: #c7d5e0;
+            line-height: 1.6;
+            
+            /* 圆角、阴影等修饰属性 */
+            background: linear-gradient(135deg, #171a21 0%, #2a475e 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            /* 盒子模型属性 */
+            padding: 15px 0;
+            border-bottom: 1px solid #316282;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #171a21;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            /* 盒子模型属性 */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            /* 文字样式 */
+            font-size: 24px;
+            font-weight: bold;
+            color: #66c0f4;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            /* 盒子模型属性 */
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            /* 文字样式 */
+            color: #c7d5e0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            /* 文字样式 */
+            color: #66c0f4;
+        }
+
+        .main-container {
+            /* 盒子模型属性 */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-section {
+            /* 盒子模型属性 */
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-title {
+            /* 文字样式 */
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            /* 文字样式 */
+            font-size: 18px;
+            color: #8f98a0;
+            margin-bottom: 30px;
+        }
+
+        .login-section {
+            /* 盒子模型属性 */
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            padding: 30px;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #1e2328;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-primary {
+            /* 盒子模型属性 */
+            width: 100%;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border: none;
+            
+            /* 文字样式 */
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            
+            /* 圆角、阴影等修饰属性 */
+            background: linear-gradient(90deg, #75b022 0%, #588a1b 100%);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            /* 圆角、阴影等修饰属性 */
+            background: linear-gradient(90deg, #83c72a 0%, #669d1f 100%);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            /* 盒子模型属性 */
+            width: 100%;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border: 1px solid #66c0f4;
+            
+            /* 文字样式 */
+            font-size: 16px;
+            color: #66c0f4;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            
+            /* 圆角、阴影等修饰属性 */
+            background: transparent;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            /* 圆角、阴影等修饰属性 */
+            background-color: #66c0f4;
+            color: #171a21;
+        }
+
+        .popular-products {
+            /* 盒子模型属性 */
+            margin-top: 50px;
+        }
+
+        .section-title {
+            /* 文字样式 */
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .products-grid {
+            /* 盒子模型属性 */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            /* 盒子模型属性 */
+            padding: 20px;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #1e2328;
+            border-radius: 8px;
+            border: 1px solid #316282;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            /* 圆角、阴影等修饰属性 */
+            border-color: #66c0f4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-name {
+            /* 文字样式 */
+            font-size: 16px;
+            color: #66c0f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .help-categories {
+            /* 盒子模型属性 */
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            /* 盒子模型属性 */
+            padding: 25px;
+            
+            /* 圆角、阴影等修饰属性 */
+            background-color: #1e2328;
+            border-radius: 8px;
+            border-left: 4px solid #66c0f4;
+        }
+
+        .category-title {
+            /* 文字样式 */
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .category-description {
+            /* 文字样式 */
+            color: #8f98a0;
+            font-size: 14px;
+        }
+
+        .footer {
+            /* 盒子模型属性 */
+            margin-top: 80px;
+            padding: 30px 0;
+            border-top: 1px solid #316282;
+            
+            /* 文字样式 */
+            text-align: center;
+            color: #8f98a0;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 24px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <img src="./_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3558646085638703426&skey=@crypt_ea1048b3_367c40d48e918b2dc673365313840b56&mmweb_appid=wx_webfilehelper.jpg" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#">商店</a></li>
+                <li><a href="#">社区</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">客服</a></li>
+                <li><a href="#">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="hero-section">
+            <h1 class="hero-title">我们能为您提供什么样的协助？</h1>
+            <p class="hero-subtitle">登录您的账户来查看购买、账户状态并获取个性化帮助。</p>
+        </section>
+
+        <section class="login-section">
+            <a href="#" class="btn-primary">登录账户</a>
+            <a href="#" class="btn-secondary">请求帮助，我无法登录</a>
+        </section>
+
+        <section class="popular-products">
+            <h2 class="section-title">热门产品</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="#" class="product-name">Counter-Strike 2</a>
+                </div>
+                <div class="product-card">
+                    <a href="#" class="product-name">PUBG: BATTLEGROUNDS</a>
+                </div>
+                <div class="product-card">
+                    <a href="#" class="product-name">Dota 2</a>
+                </div>
+                <div class="product-card">
+                    <a href="#" class="product-name">Apex Legends</a>
+                </div>
+                <div class="product-card">
+                    <a href="#" class="product-name">Team Fortress 2</a>
+                </div>
+                <div class="product-card">
+                    <a href="#" class="product-name">Grand Theft Auto V</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-categories">
+            <div class="category-card">
+                <h3 class="category-title">账户问题</h3>
+                <p class="category-description">登录问题、密码重置、账户安全等相关帮助</p>
+            </div>
+            <div class="category-card">
+                <h3 class="category-title">购买与付款</h3>
+                <p class="category-description">支付问题、退款申请、购买记录查询</p>
+            </div>
+            <div class="category-card">
+                <h3 class="category-title">学习与软件</h3>
+                <p class="category-description">学习无法启动、更新问题、技术支持</p>
+            </div>
+            <div class="category-card">
+                <h3 class="category-title">社区与朋友</h3>
+                <p class="category-description">好友列表、聊天问题、社区功能</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 StudyHub Corporation. 保留所有权利。所有商标均为其各自所有者在中国及其它国家/地区的财产。</p>
+    </footer>
+</body>
+</html>
